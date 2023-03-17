@@ -1,57 +1,31 @@
 #include <stdio.h>
 
-
-
 /**
-  * main - Prints the numbers from 00 to 99
-  *
-  * Return: Always (Success)
-  */
+ * main - Prints two-digit numbers with no repeating digits
+ *
+ * Return: Always (Success)
+ */
 
 int main(void)
-
 {
+	int tens_digit, ones_digit;
 
-	int c, i;
-
-	c = i = '0';
-
-
-
-	for (c = '0'; c <= '9'; c++)
-
+	for (tens_digit = 0; tens_digit <= 9; tens_digit++)
 	{
-
-		for (i = '0'; i <= '9'; i++)
-
+		for (ones_digit = tens_digit + 1; ones_digit <= 9; ones_digit++)
 		{
+			putchar(tens_digit + '0');
+			putchar(ones_digit + '0');
 
-			putchar(c);
-
-			putchar(i);
-
-
-
-			if ((c != '9') || (c == '9' && i != '9'))
-
+			if (tens_digit != 8 || ones_digit != 9)
 			{
-
 				putchar(',');
-
 				putchar(' ');
-
 			}
-
 		}
-
 	}
-
-
 
 	putchar('\n');
 
-
-
 	return (0);
-
 }
