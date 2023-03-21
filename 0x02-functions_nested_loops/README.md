@@ -52,4 +52,4 @@ What you should learn from this project:
 ---
 
 ## Author
-* **Derrick Gee** - [kevin](https://github.com/KevinStreetCoder)
+* **Kevin kariithi** - [kevin](https://github.com/KevinStreetCoder)
