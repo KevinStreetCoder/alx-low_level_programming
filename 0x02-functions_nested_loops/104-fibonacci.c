@@ -8,6 +8,7 @@
  */
 int main(void)
 {
+
 	int inc;
 
 	unsigned long n1 = 0, n2 = 1, n3;
@@ -75,5 +76,5 @@ int main(void)
 		n2_h1 = h1;
 
 		n2_h2 = h2;
+
 	}
-}
