@@ -1,13 +1,11 @@
 #include "main.h"
 
 /**
+ * print_times_table - prints the timeas table with parameter
  *
- * *print_times_table - prints the timeas table with parameter
+ * @n: parameter
  *
- * *@n: parameter
- *
- * *Return: returns nothing
- *
+ * Return: returns nothing
  */
 
 void print_times_table(int n)

@@ -1,10 +1,9 @@
 #include <stdio.h>
 
 /**
+ * main - prints count of multiples
  *
- * *main - prints count of multiples
- *
- * *Return: return 0
+ * Return: return 0
  */
 int main(void)
 
