@@ -1,25 +1,27 @@
-#include "stdio.h"
+#include <stdio.h>
 
 /**
- * main - Entry point
+ * main - Prints the first 98 Fibonacci numbers, starting with 1 and 2,
+ *        followed by a new line.
  *
- * Return: Always 0 (Success)
+ * Return: Always 0.
  */
 int main(void)
 {
-	int count, max_count = 98;
-	unsigned long int fib1 = 1, fib2 = 2, next;
+	int i;
+	unsigned long int num1 = 1, num2 = 2, sum;
 
-	printf("%lu, %lu", fib1, fib2);
+	printf("%lu, %lu", num1, num2);
 
-	for (count = 2; count < max_count; count++)
+	for (i = 0; i < 96; i++)
 	{
-		next = fib1 + fib2;
-		printf(", %lu", next);
-		fib1 = fib2;
-		fib2 = next;
+		sum = num1 + num2;
+		printf(", %lu", sum);
+		num1 = num2;
+		num2 = sum;
 	}
 
 	printf("\n");
+
 	return (0);
-}
+	}
