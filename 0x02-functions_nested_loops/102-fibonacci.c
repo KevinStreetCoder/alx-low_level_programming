@@ -6,7 +6,7 @@
  *
  * Return: returns 0
  */
-int main()
+int main(void)
 {
 	unsigned long int i;
 	unsigned long int bef = 1;
