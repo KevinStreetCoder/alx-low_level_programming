@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * _islower - checks for lowercase character
+ * _isalpha - checks for alphabetic character
  * @c: the character to check
  *
- * Return: 1 if c is lowercase, 0 otherwise
+ * Return: 1 if c is a letter (lowercase or uppercase), 0 otherwise
  */
 int _isalpha(int c)
 {
-	/* If c is between 'a' and 'z' or between 'A' and 'Z' in ASCII table, return 1 */
+	/* If c is between 'a'&'z' or 'A' & 'Z' in ASCII, return 1 */
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 		return (1);
 	/* Otherwise, return 0 */
