@@ -8,20 +8,19 @@
  */
 int main()
 {
-	int i, n = 50;
-	long long int fib1 = 1, fib2 = 2, next;
+	unsigned long int i;
+	unsigned long int bef = 1;
+	unsigned long int aft = 2;
 
-	printf("%lld, %lld", fib1, fib2);
+	printf("%lu", bef);
 
-	for (i = 3; i <= n; i++)
+	for (i = 1; i < 50; i++)
 	{
-		next = fib1 + fib2;
-		printf(", %lld", next);
-		fib1 = fib2;
-		fib2 = next;
+		printf(", %lu", aft);
+		aft += bef;
+		bef = aft - bef;
 	}
 
 	printf("\n");
-
-	return 0;
+	return (0);
 }
