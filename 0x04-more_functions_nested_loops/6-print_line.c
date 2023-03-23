@@ -1,20 +1,15 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
- * print_line - Prints a straight line of underscores
- *
- * @n: Number of times to print '_'
- *
- * Return: void
+ * print_line - prints a straight line
+ * @n: parameter
+ * Return:returns nothing
  */
 
 void print_line(int n)
 {
-	int i;
-
-	if (n <= 0)
-		_putchar('\n');
-	for (i = 0; i < n; i++)
+	while (n-- > 0)
 	{
 		_putchar('_');
 	}
