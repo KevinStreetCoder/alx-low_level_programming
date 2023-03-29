@@ -23,7 +23,7 @@ void reverse_array(int *a, int n);
 char *string_toupper(char *str);
 
 /* task 6 */
-char *cap_string(char *);
+char *cap_string(char *s);
 
 /* task 7 */
 char *leet(char *);
