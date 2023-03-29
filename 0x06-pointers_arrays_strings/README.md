@@ -1,4 +1,4 @@
-# 0x05. C - More pointers, arrays and strings
+# 0x06. C - More pointers, arrays and strings
 
 ## Description
 This project is about pointers, arrays, and strings. You are expected to be able to explain what pointers and arrays are and how to use them. You should also be able to explain the differences between pointers and arrays. Additionally, you should know how to use strings and manipulate them. You should also be familiar with the scope of variables.
