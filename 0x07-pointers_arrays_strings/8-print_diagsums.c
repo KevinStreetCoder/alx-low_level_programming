@@ -6,7 +6,7 @@
  * two diagonals of a square matrix of integers.
  * @a: A pointer to the first element of the matrix.
  * @size: The size of the matrix.
- * 
+ *
  * Return: void
  */
 void print_diagsums(int *a, int size)
