@@ -1,39 +1,36 @@
 #include "main.h"
 
 /**
- * wildcmp - compares two strings and returns 1 if they can be considered identical
- * @s1: first string to compare
- * @s2: second string to compare, can contain the special character *
+ * wildcmp - Compares two strings, where the second string may contain wildcard
+ * characters ('*').
  *
- * Return: 1 if the strings can be considered identical, otherwise 0
+ * @s1: The first string to compare.
+ * @s2: The second string to compare, which may contain wildcard characters.
+ *
+ * Return: 1 if the strings match, 0 otherwise.
  */
 int wildcmp(char *s1, char *s2)
 {
+	/* Both strings are empty */
 	if (*s1 == '\0' && *s2 == '\0')
-	{
-		// If both strings are empty, they are identical
 		return (1);
-	}
-	else if (*s2 == '*')
+
+	/* Characters match */
+	if (*s1 == *s2)
+		return (wildcmp(s1 + 1, s2 + 1));
+
+	/* Wildcard character encountered */
+	if (*s2 == '*')
 	{
-			// If s2 starts with a *, recursively compare s1 and s2 without the *
-			if (*s1 == '\0') { // If s1 is empty and s2 starts with *, recursively compare s1 and s2+1
-			return (wildcmp(s1, s2+1));
-		}
-		else
-		{
-			// Otherwise, try matching s1 with the rest of s2, or advancing s1
-			return (wildcmp(s1, s2+1) || wildcmp(s1+1, s2));
-		}
+		/* Check for consecutive wildcard characters */
+		if (*(s2 + 1) != '\0' && *s1 == '\0')
+			return (0);
+
+		/* Recurse with s2+1 and s1, or s2 and s1+1 */
+		if (wildcmp(s1, s2 + 1) || wildcmp(s1 + 1, s2))
+			return (1);
 	}
-	else if (*s1 == *s2)
-	{
-		// If the characters match, compare the rest of the strings
-		return (wildcmp(s1+1, s2+1));
-	}
-	else
-	{
-		// Otherwise, the strings are not identical
-		return (0);
-	}
+
+	/* No match found */
+	return (0);
 }
