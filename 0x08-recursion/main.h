@@ -1,0 +1,18 @@
+#ifndef MAIN_H
+#define MAIN_H
+
+/* Function prototypes */
+int is_prime_number(int n);
+int _sqrt_recursion(int n);
+int _pow_recursion(int x, int y);
+int factorial(int n);
+int _strlen_recursion(char *s);
+void _print_rev_recursion(char *s);
+void _puts_recursion(char *s);
+int is_prime_number(int n);
+int _sqrt_recursion_helper(int n, int start, int end);
+
+/* Helper function prototype */
+int _putchar(char c);
+
+#endif /* MAIN_H */
