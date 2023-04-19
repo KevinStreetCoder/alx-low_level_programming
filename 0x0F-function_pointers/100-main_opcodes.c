@@ -6,10 +6,8 @@
  * main - prints opcodes of its own main function
  * @argc: number of arguments passed to program
  * @argv: array of pointers to arguments
- *
  * Return: 0 on success
  */
-
 int main(int argc, char *argv[])
 {
 int i, bytes;
