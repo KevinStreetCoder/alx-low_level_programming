@@ -12,30 +12,30 @@
 
 int main(int argc, char *argv[])
 {
-	int i, bytes;
-	char *opcodes;
+int i, bytes;
+char *opcodes;
 
-	if (argc != 2)
-	{
-		printf("Error\n");
-		exit(1);
-	}
+if (argc != 2)
+{
+printf("Error\n");
+exit(1);
+}
 
-	bytes = atoi(argv[1]);
-	if (bytes < 0)
-	{
-		printf("Error\n");
-		exit(2);
-	}
+bytes = atoi(argv[1]);
+if (bytes < 0)
+{
+printf("Error\n");
+exit(2);
+}
 
-	opcodes = (char *)main;
-	for (i = 0; i < bytes; i++)
-	{
-		printf("%02hhx", opcodes[i]);
-		if (i < bytes - 1)
-			printf(" ");
-	}
-	printf("\n");
+opcodes = (char *)main;
+for (i = 0; i < bytes; i++)
+{
+printf("%02hhx", opcodes[i]);
+if (i < bytes - 1)
+printf(" ");
+}
+printf("\n");
 
-	return (0);
+return (0);
 }
