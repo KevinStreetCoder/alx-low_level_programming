@@ -1,0 +1,47 @@
+# Makefile for compiling school program
+# Author: Kevin
+
+# Compiler
+CC := gcc
+
+# Compiler flags
+CFLAGS := -Wall -Werror -Wextra -pedantic
+
+# Source files
+SRC := main.c school.c
+
+# Object files (generated from SRC)
+OBJ := $(SRC:.c=.o)
+
+# Executable name
+NAME := school
+
+# Program to delete files
+RM := rm -f
+
+# Rules
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+
+# Rule to compile source files
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+# Rule to clean up generated files
+clean:
+	$(RM) *~ $(NAME)
+
+# Rule to delete object files
+oclean:
+	$(RM) $(OBJ)
+
+# Rule to delete all generated files
+fclean: clean oclean
+
+# Rule to force recompilation of all source files
+re: fclean all
+
+# Phony targets to avoid conflicts with files named like the targets
+.PHONY: all clean oclean fclean re

@@ -1,0 +1,28 @@
+# Makefile for compiling school program
+# Author: Kevin
+
+# Compiler and flags
+CC := gcc
+CFLAGS := -Wall -Wextra -Werror -pedantic
+
+# Source files
+SRCS := main.c school.c
+
+# Object files
+OBJS := $(SRCS:.c=.o)
+
+# Executable
+TARGET := school
+
+# Rule to build the executable
+all: $(TARGET)
+
+$(TARGET): $(OBJS)
+	$(CC) $(CFLAGS) $(OBJS) -o $(TARGET)
+
+# Rule to clean up generated files
+clean:
+	rm -f $(OBJS) $(TARGET)
+
+# Phony target to avoid conflicts with files named "clean"
+.PHONY: clean
